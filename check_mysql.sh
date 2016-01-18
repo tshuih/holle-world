@@ -3,8 +3,8 @@
 #file is check_mysql.sh
 #Author by tom 20151202
 
-mstool="mysql -h $1 -u tshuih -pVulvlgVg"
-sltool="mysql -S /tmp/mysql$2.sock -uroot -pVulvlgVg"
+mstool="mysql -h $1 -u tshuih -p****"
+sltool="mysql -S /tmp/mysql$2.sock -uroot -p****"
 
 declare -a slave_stat
 slave_stat=($($sltool -e "show slave status\G"|grep Running |awk '{print $2}'))
